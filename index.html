@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Youtube Clone</title>
+</head>
+
+<body>
+    <!-- Header -> logo + search + icons -->
+    <header class="header">
+        <div class="container">
+            <div class="header-left">
+                <img src="assets/images/menu.png" alt="Menu" class="menu">
+                <div class="logo">
+                    <img src="assets/images/logo.png" alt="Logo" width="50px" height="50px" class="logo">
+                    <a href="https://www.youtube.com" target="_blank" class="logo">Youtube<sup>PK</sup> </a>
+                </div>
+            </div>
+            <div class="header-center">
+                <div>
+                    <form action="" class="search-form">
+                        <label for="search"></label>
+                        <input id="search" type="text" autocomplete="off" placeholder="Search Youtube" class="search">
+                        <button type="submit" class="search-btn">
+                            <img src="assets/images/search.png" alt="Search">
+                        </button>
+                    </form>
+                </div>
+                <img src="assets/images/voice.png" alt="Voice Search" class="voice-search">
+            </div>
+            <div class="header-right">
+                <button class="create-btn">
+                    <img src="assets/images/create.png" alt="create" class="create-icon">
+                    Create
+                </button>
+                <button class="notification-btn">
+                    <img src="assets/images/notification.png" alt="Notification" class="notification-icon">
+                    <span class="notification-count">1</span>
+                </button>
+                <button class="profile-btn">
+                    <img src="assets/images/profile.png" alt="Profile" class="profile-icon">
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <div class="page-body">
+        <!-- Sidebar -->
+        <aside class="sidebar">
+            <ul class="sidebar-menu">
+                <div>
+                    <li><a href="#">Home</a>
+                        <img src="assets/images/home.png" alt="Home" class="sidebar-icon">
+                    </li>
+                    <li><a href="#">Shorts</a>
+                        <img src="assets/images/shorts.png" alt="Shorts" class="sidebar-icon">
+                    </li>
+                    <li><a href="#">Trending</a>
+                        <img src="assets/images/trending.png" alt="Trending" class="sidebar-icon">
+                        <hr>
+                    </li>
+                </div>
+                <div>
+                    <span>Subscriptions</span>
+                    <li><a href="#">Subscriptions</a>
+                        <img src="assets/images/subscriptions.png" alt="Subscriptions" class="sidebar-icon">
+                    </li>
+                    <li>
+                        <a href="#">Library</a>
+                        <img src="assets/images/library.png" alt="Library" class="sidebar-icon">
+                    </li>
+                </div>
+                <hr>
+                <span>Explore</span>
+            </ul>
+            <footer class="sidebar-footer">
+                <p>&copy; 2024 Youtube Clone. All rights reserved.</p>
+            </footer>
+        </aside>
+
+        <!-- Main Content -->
+        <main class="main-content">
+            <div>
+                <div class="filter-chips-row">
+                    <button class="filter-chip">All</button>
+                    <button class="filter-chip">Live</button>
+                    <button class="filter-chip">Gaming</button>
+                    <button class="filter-chip">Music</button>
+                    <button class="filter-chip">News</button>
+                    <button class="filter-chip">Sports</button>
+                </div>
+                <section class="video-list">
+                    <article class="video-card">
+                        <iframe width="560" height="315"
+                            src="https://www.youtube.com/embed/ycEKAjMdd1Q?si=7bV6O7lofIe0gajx"
+                            title="YouTube video player" frameborder="0"
+                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                            referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                        <div class="video-info">
+                            <div class="video-details">
+                                <h3 class="video-title">Learn HTML</h3>
+                                <img src="assets/images/menu.png" alt="three dots" class="three-dots">
+                            </div>
+                            <p class="video-views">1M views • 1 day ago</p>
+                            <div>
+                                <img src="assets/images/channel1.png" alt="Channel" class="channel-avatar">
+                                <span class="channel-name">Code with me</span>
+                            </div>
+                            <p>#tags</p>
+                            <span>4K</span>
+                        </div>
+                    </article>
+                    <br>
+                    <article class="video-card">
+                        <iframe width="560" height="315"
+                            src="https://www.youtube.com/embed/ycEKAjMdd1Q?si=7bV6O7lofIe0gajx"
+                            title="YouTube video player" frameborder="0"
+                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                            referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                        <div class="video-info">
+                            <div class="video-details">
+                                <h3 class="video-title">Learn HTML</h3>
+                                <img src="assets/images/menu.png" alt="three dots" class="three-dots">
+                            </div>
+                            <p class="video-views">1M views • 1 day ago</p>
+                            <div>
+                                <img src="assets/images/channel1.png" alt="Channel" class="channel-avatar">
+                                <span class="channel-name">Code with me</span>
+                            </div>
+                            <p>#tags</p>
+                            <span>4K</span>
+                        </div>
+                    </article>
+                    <br>
+                    <article class="video-card">
+                        <iframe width="560" height="315"
+                            src="https://www.youtube.com/embed/ycEKAjMdd1Q?si=7bV6O7lofIe0gajx"
+                            title="YouTube video player" frameborder="0"
+                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                            referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                        <div class="video-info">
+                            <div class="video-details">
+                                <h3 class="video-title">Learn HTML</h3>
+                                <img src="assets/images/menu.png" alt="three dots" class="three-dots">
+                            </div>
+                            <p class="video-views">1M views • 1 day ago</p>
+                            <div>
+                                <img src="assets/images/channel1.png" alt="Channel" class="channel-avatar">
+                                <span class="channel-name">Code with me</span>
+                            </div>
+                            <p>#tags</p>
+                            <span>4K</span>
+                        </div>
+                    </article>
+                    <br>
+                </section>
+
+            </div>
+    </div>
+    </div>
+</body>
+
+</html>
