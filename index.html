@@ -5,42 +5,50 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Youtube Clone</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=League+Gothic&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
-    <!-- Header -> logo + search + icons -->
+    
     <header class="header">
         <div class="container">
             <div class="header-left">
-                <img src="assets/images/menu.png" alt="Menu" class="menu">
+                <img src="assets/menu.png" alt="Menu" class="menu">
                 <div class="logo">
-                    <img src="assets/images/logo.png" alt="Logo" width="50px" height="50px" class="logo">
-                    <a href="https://www.youtube.com" target="_blank" class="logo">Youtube<sup>PK</sup> </a>
+                    <img src="assets/youtube-logo.png" alt="Logo" width="33px" height="33px" class="logo">
+                    <a href="https://www.youtube.com" target="_blank" class="logo"
+                        style="font-family: 'League Gothic', sans-serif;">Youtube<sup>PK</sup> </a>
                 </div>
             </div>
             <div class="header-center">
                 <div>
                     <form action="" class="search-form">
                         <label for="search"></label>
-                        <input id="search" type="text" autocomplete="off" placeholder="Search Youtube" class="search">
+                        <input id="search" type="text" autocomplete="off" placeholder="Search Youtube"
+                            class="search-input">
                         <button type="submit" class="search-btn">
-                            <img src="assets/images/search.png" alt="Search">
+                            <img src="assets/search.png" alt="Search" class="menu">
                         </button>
                     </form>
                 </div>
-                <img src="assets/images/voice.png" alt="Voice Search" class="voice-search">
+                <img src="assets/mic.png" alt="Voice Search" class="menu">
             </div>
             <div class="header-right">
                 <button class="create-btn">
-                    <img src="assets/images/create.png" alt="create" class="create-icon">
-                    Create
+                    <img src="assets/create.png" alt="create" class="menu">
+
                 </button>
                 <button class="notification-btn">
-                    <img src="assets/images/notification.png" alt="Notification" class="notification-icon">
-                    <span class="notification-count">1</span>
+                    <img src="assets/notification.png" alt="Notification" class="menu">
+                    <span class="notification-count"></span>
                 </button>
                 <button class="profile-btn">
-                    <img src="assets/images/profile.png" alt="Profile" class="profile-icon">
+                    <img src="assets/profile.png" alt="Profile" class="menu">
                 </button>
             </div>
         </div>
@@ -51,40 +59,70 @@
         <aside class="sidebar">
             <ul class="sidebar-menu">
                 <div>
-                    <li><a href="#">Home</a>
-                        <img src="assets/images/home.png" alt="Home" class="sidebar-icon">
+                    <li class="sidebar-item"><a href="#">
+                            <img src="assets/home.png" alt="Home" class="sidebar-icon">
+                            Home
+                        </a>
                     </li>
-                    <li><a href="#">Shorts</a>
-                        <img src="assets/images/shorts.png" alt="Shorts" class="sidebar-icon">
+                    <li class="sidebar-item"><a href="#">
+                            <img src="assets/shorts.png" alt="Shorts" class="sidebar-icon">
+                            Shorts
+                        </a>
                     </li>
-                    <li><a href="#">Trending</a>
-                        <img src="assets/images/trending.png" alt="Trending" class="sidebar-icon">
-                        <hr>
-                    </li>
-                </div>
-                <div>
-                    <span>Subscriptions</span>
-                    <li><a href="#">Subscriptions</a>
-                        <img src="assets/images/subscriptions.png" alt="Subscriptions" class="sidebar-icon">
-                    </li>
-                    <li>
-                        <a href="#">Library</a>
-                        <img src="assets/images/library.png" alt="Library" class="sidebar-icon">
+                    <li class="sidebar-item"><a href="#">
+                            <img src="assets/trending.png" alt="Trending" class="sidebar-icon">
+                            Trending
+                        </a>
+
                     </li>
                 </div>
                 <hr>
-                <span>Explore</span>
+                <div>
+                    <span>Subscriptions</span>
+                    <li class="sidebar-item"><a href="#">
+                            <img src="assets/avatar.jpg" alt="Subscriptions" class="sidebar-icon">
+                            Sheryar Systems
+                        </a>
+                    </li>
+                    <li class="sidebar-item"><a href="#">
+                            <img src="assets/cristiano.jpg" alt="Subscriptions" class="sidebar-icon">
+                            UR Cristiano
+                        </a>
+                    </li>
+                    <li class="sidebar-item"><a href="#">
+                            <img src="assets/ign.png" alt="Subscriptions" class="sidebar-icon">
+                            IGN
+                        </a>
+                    </li>
+                    <li class="sidebar-item"><a href="#">
+                            <img src="assets/rockstar.jpg" alt="Subscriptions" class="sidebar-icon">
+                            Rockstar Games
+                        </a>
+                    </li>
+                    <li class="sidebar-item"><a href="#">
+                            <img src="assets/ishowspeed.jpg" alt="Subscriptions" class="sidebar-icon">
+                            iShowSpeed
+                        </a>
+                    </li>
+                    <li class="sidebar-item"><a href="#">
+                            <img src="assets/ubisoft.jpg" alt="Subscriptions" class="sidebar-icon">
+                            Ubisoft
+                        </a>
+                    </li>
+                </div>
+                <hr>
+                <a href="#" class="sidebar-item">Explore</a>
             </ul>
             <footer class="sidebar-footer">
                 <p>&copy; 2024 Youtube Clone. All rights reserved.</p>
             </footer>
         </aside>
 
-        <!-- Main Content -->
+        
         <main class="main-content">
             <div>
                 <div class="filter-chips-row">
-                    <button class="filter-chip">All</button>
+                    <button class="filter-chip-active">All</button>
                     <button class="filter-chip">Live</button>
                     <button class="filter-chip">Gaming</button>
                     <button class="filter-chip">Music</button>
@@ -93,72 +131,491 @@
                 </div>
                 <section class="video-list">
                     <article class="video-card">
-                        <iframe width="560" height="315"
-                            src="https://www.youtube.com/embed/ycEKAjMdd1Q?si=7bV6O7lofIe0gajx"
-                            title="YouTube video player" frameborder="0"
-                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-                            referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                        <div class="thumbnail-container">
+                            <iframe src="https://www.youtube.com/embed/ycEKAjMdd1Q?si=7bV6O7lofIe0gajx"
+                                title="YouTube video player" frameborder="0"
+                                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                                allowfullscreen></iframe>
+                        </div>
+
                         <div class="video-info">
-                            <div class="video-details">
-                                <h3 class="video-title">Learn HTML</h3>
-                                <img src="assets/images/menu.png" alt="three dots" class="three-dots">
+                            <img src="assets/avatar.jpg" alt="Channel" class="channel-avatar">
+
+                            <div class="video-text-details">
+                                <div class="title-row">
+                                    <h3 class="video-title">Learn HTML Lorem ipsum dolor sit amet consectetur
+                                        adipisicing elit. Aut, rerum.</h3>
+                                    <img src="assets/3dots.png" alt="three dots" class="three-dots">
+                                </div>
+                                <p class="channel-name">Code with me</p>
+                                <p class="video-views">1M views • 1 day ago</p>
+                                <p class="video-tags">#tags</p>
+                                <span class="video-badge">4K</span>
                             </div>
-                            <p class="video-views">1M views • 1 day ago</p>
-                            <div>
-                                <img src="assets/images/channel1.png" alt="Channel" class="channel-avatar">
-                                <span class="channel-name">Code with me</span>
-                            </div>
-                            <p>#tags</p>
-                            <span>4K</span>
                         </div>
                     </article>
-                    <br>
                     <article class="video-card">
-                        <iframe width="560" height="315"
-                            src="https://www.youtube.com/embed/ycEKAjMdd1Q?si=7bV6O7lofIe0gajx"
-                            title="YouTube video player" frameborder="0"
-                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-                            referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                        <div class="thumbnail-container">
+                            <iframe src="https://www.youtube.com/embed/ycEKAjMdd1Q?si=7bV6O7lofIe0gajx"
+                                title="YouTube video player" frameborder="0"
+                                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                                allowfullscreen></iframe>
+                        </div>
+
                         <div class="video-info">
-                            <div class="video-details">
-                                <h3 class="video-title">Learn HTML</h3>
-                                <img src="assets/images/menu.png" alt="three dots" class="three-dots">
+                            <img src="assets/avatar.jpg" alt="Channel" class="channel-avatar">
+
+                            <div class="video-text-details">
+                                <div class="title-row">
+                                    <h3 class="video-title">Learn HTML Lorem ipsum dolor sit amet consectetur
+                                        adipisicing elit. Aut, rerum.</h3>
+                                    <img src="assets/3dots.png" alt="three dots" class="three-dots">
+                                </div>
+                                <p class="channel-name">Code with me</p>
+                                <p class="video-views">1M views • 1 day ago</p>
+                                <p class="video-tags">#tags</p>
+                                <span class="video-badge">4K</span>
                             </div>
-                            <p class="video-views">1M views • 1 day ago</p>
-                            <div>
-                                <img src="assets/images/channel1.png" alt="Channel" class="channel-avatar">
-                                <span class="channel-name">Code with me</span>
-                            </div>
-                            <p>#tags</p>
-                            <span>4K</span>
                         </div>
                     </article>
-                    <br>
                     <article class="video-card">
-                        <iframe width="560" height="315"
-                            src="https://www.youtube.com/embed/ycEKAjMdd1Q?si=7bV6O7lofIe0gajx"
-                            title="YouTube video player" frameborder="0"
-                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-                            referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                        <div class="thumbnail-container">
+                            <iframe src="https://www.youtube.com/embed/ycEKAjMdd1Q?si=7bV6O7lofIe0gajx"
+                                title="YouTube video player" frameborder="0"
+                                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                                allowfullscreen></iframe>
+                        </div>
+
                         <div class="video-info">
-                            <div class="video-details">
-                                <h3 class="video-title">Learn HTML</h3>
-                                <img src="assets/images/menu.png" alt="three dots" class="three-dots">
+                            <img src="assets/avatar.jpg" alt="Channel" class="channel-avatar">
+
+                            <div class="video-text-details">
+                                <div class="title-row">
+                                    <h3 class="video-title">Learn HTML Lorem ipsum dolor sit amet consectetur
+                                        adipisicing elit. Aut, rerum.</h3>
+                                    <img src="assets/3dots.png" alt="three dots" class="three-dots">
+                                </div>
+                                <p class="channel-name">Code with me</p>
+                                <p class="video-views">1M views • 1 day ago</p>
+                                <p class="video-tags">#tags</p>
+                                <span class="video-badge">4K</span>
                             </div>
-                            <p class="video-views">1M views • 1 day ago</p>
-                            <div>
-                                <img src="assets/images/channel1.png" alt="Channel" class="channel-avatar">
-                                <span class="channel-name">Code with me</span>
-                            </div>
-                            <p>#tags</p>
-                            <span>4K</span>
                         </div>
                     </article>
-                    <br>
+                    <article class="video-card">
+                        <div class="thumbnail-container">
+                            <iframe src="https://www.youtube.com/embed/ycEKAjMdd1Q?si=7bV6O7lofIe0gajx"
+                                title="YouTube video player" frameborder="0"
+                                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                                allowfullscreen></iframe>
+                        </div>
+
+                        <div class="video-info">
+                            <img src="assets/avatar.jpg" alt="Channel" class="channel-avatar">
+
+                            <div class="video-text-details">
+                                <div class="title-row">
+                                    <h3 class="video-title">Learn HTML Lorem ipsum dolor sit amet consectetur
+                                        adipisicing elit. Aut, rerum.</h3>
+                                    <img src="assets/3dots.png" alt="three dots" class="three-dots">
+                                </div>
+                                <p class="channel-name">Code with me</p>
+                                <p class="video-views">1M views • 1 day ago</p>
+                                <p class="video-tags">#tags</p>
+                                <span class="video-badge">4K</span>
+                            </div>
+                        </div>
+                    </article>
+                    <article class="video-card">
+                        <div class="thumbnail-container">
+                            <iframe src="https://www.youtube.com/embed/ycEKAjMdd1Q?si=7bV6O7lofIe0gajx"
+                                title="YouTube video player" frameborder="0"
+                                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                                allowfullscreen></iframe>
+                        </div>
+
+                        <div class="video-info">
+                            <img src="assets/avatar.jpg" alt="Channel" class="channel-avatar">
+
+                            <div class="video-text-details">
+                                <div class="title-row">
+                                    <h3 class="video-title">Learn HTML Lorem ipsum dolor sit amet consectetur
+                                        adipisicing elit. Aut, rerum.</h3>
+                                    <img src="assets/3dots.png" alt="three dots" class="three-dots">
+                                </div>
+                                <p class="channel-name">Code with me</p>
+                                <p class="video-views">1M views • 1 day ago</p>
+                                <p class="video-tags">#tags</p>
+                                <span class="video-badge">4K</span>
+                            </div>
+                        </div>
+                    </article>
+                    <article class="video-card">
+                        <div class="thumbnail-container">
+                            <iframe src="https://www.youtube.com/embed/ycEKAjMdd1Q?si=7bV6O7lofIe0gajx"
+                                title="YouTube video player" frameborder="0"
+                                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                                allowfullscreen></iframe>
+                        </div>
+
+                        <div class="video-info">
+                            <img src="assets/avatar.jpg" alt="Channel" class="channel-avatar">
+
+                            <div class="video-text-details">
+                                <div class="title-row">
+                                    <h3 class="video-title">Learn HTML Lorem ipsum dolor sit amet consectetur
+                                        adipisicing elit. Aut, rerum.</h3>
+                                    <img src="assets/3dots.png" alt="three dots" class="three-dots">
+                                </div>
+                                <p class="channel-name">Code with me</p>
+                                <p class="video-views">1M views • 1 day ago</p>
+                                <p class="video-tags">#tags</p>
+                                <span class="video-badge">4K</span>
+                            </div>
+                        </div>
+                    </article>
+                    <article class="video-card">
+                        <div class="thumbnail-container">
+                            <iframe src="https://www.youtube.com/embed/ycEKAjMdd1Q?si=7bV6O7lofIe0gajx"
+                                title="YouTube video player" frameborder="0"
+                                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                                allowfullscreen></iframe>
+                        </div>
+
+                        <div class="video-info">
+                            <img src="assets/avatar.jpg" alt="Channel" class="channel-avatar">
+
+                            <div class="video-text-details">
+                                <div class="title-row">
+                                    <h3 class="video-title">Learn HTML Lorem ipsum dolor sit amet consectetur
+                                        adipisicing elit. Aut, rerum.</h3>
+                                    <img src="assets/3dots.png" alt="three dots" class="three-dots">
+                                </div>
+                                <p class="channel-name">Code with me</p>
+                                <p class="video-views">1M views • 1 day ago</p>
+                                <p class="video-tags">#tags</p>
+                                <span class="video-badge">4K</span>
+                            </div>
+                        </div>
+                    </article>
+                    <article class="video-card">
+                        <div class="thumbnail-container">
+                            <iframe src="https://www.youtube.com/embed/ycEKAjMdd1Q?si=7bV6O7lofIe0gajx"
+                                title="YouTube video player" frameborder="0"
+                                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                                allowfullscreen></iframe>
+                        </div>
+
+                        <div class="video-info">
+                            <img src="assets/avatar.jpg" alt="Channel" class="channel-avatar">
+
+                            <div class="video-text-details">
+                                <div class="title-row">
+                                    <h3 class="video-title">Learn HTML Lorem ipsum dolor sit amet consectetur
+                                        adipisicing elit. Aut, rerum.</h3>
+                                    <img src="assets/3dots.png" alt="three dots" class="three-dots">
+                                </div>
+                                <p class="channel-name">Code with me</p>
+                                <p class="video-views">1M views • 1 day ago</p>
+                                <p class="video-tags">#tags</p>
+                                <span class="video-badge">4K</span>
+                            </div>
+                        </div>
+                    </article>
+                    <article class="video-card">
+                        <div class="thumbnail-container">
+                            <iframe src="https://www.youtube.com/embed/ycEKAjMdd1Q?si=7bV6O7lofIe0gajx"
+                                title="YouTube video player" frameborder="0"
+                                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                                allowfullscreen></iframe>
+                        </div>
+
+                        <div class="video-info">
+                            <img src="assets/avatar.jpg" alt="Channel" class="channel-avatar">
+
+                            <div class="video-text-details">
+                                <div class="title-row">
+                                    <h3 class="video-title">Learn HTML Lorem ipsum dolor sit amet consectetur
+                                        adipisicing elit. Aut, rerum.</h3>
+                                    <img src="assets/3dots.png" alt="three dots" class="three-dots">
+                                </div>
+                                <p class="channel-name">Code with me</p>
+                                <p class="video-views">1M views • 1 day ago</p>
+                                <p class="video-tags">#tags</p>
+                                <span class="video-badge">4K</span>
+                            </div>
+                        </div>
+                    </article>
+                    <article class="video-card">
+                        <div class="thumbnail-container">
+                            <iframe src="https://www.youtube.com/embed/ycEKAjMdd1Q?si=7bV6O7lofIe0gajx"
+                                title="YouTube video player" frameborder="0"
+                                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                                allowfullscreen></iframe>
+                        </div>
+
+                        <div class="video-info">
+                            <img src="assets/avatar.jpg" alt="Channel" class="channel-avatar">
+
+                            <div class="video-text-details">
+                                <div class="title-row">
+                                    <h3 class="video-title">Learn HTML Lorem ipsum dolor sit amet consectetur
+                                        adipisicing elit. Aut, rerum.</h3>
+                                    <img src="assets/3dots.png" alt="three dots" class="three-dots">
+                                </div>
+                                <p class="channel-name">Code with me</p>
+                                <p class="video-views">1M views • 1 day ago</p>
+                                <p class="video-tags">#tags</p>
+                                <span class="video-badge">4K</span>
+                            </div>
+                        </div>
+                    </article>
+                    <article class="video-card">
+                        <div class="thumbnail-container">
+                            <iframe src="https://www.youtube.com/embed/ycEKAjMdd1Q?si=7bV6O7lofIe0gajx"
+                                title="YouTube video player" frameborder="0"
+                                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                                allowfullscreen></iframe>
+                        </div>
+
+                        <div class="video-info">
+                            <img src="assets/avatar.jpg" alt="Channel" class="channel-avatar">
+
+                            <div class="video-text-details">
+                                <div class="title-row">
+                                    <h3 class="video-title">Learn HTML Lorem ipsum dolor sit amet consectetur
+                                        adipisicing elit. Aut, rerum.</h3>
+                                    <img src="assets/3dots.png" alt="three dots" class="three-dots">
+                                </div>
+                                <p class="channel-name">Code with me</p>
+                                <p class="video-views">1M views • 1 day ago</p>
+                                <p class="video-tags">#tags</p>
+                                <span class="video-badge">4K</span>
+                            </div>
+                        </div>
+                    </article>
+                    <article class="video-card">
+                        <div class="thumbnail-container">
+                            <iframe src="https://www.youtube.com/embed/ycEKAjMdd1Q?si=7bV6O7lofIe0gajx"
+                                title="YouTube video player" frameborder="0"
+                                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                                allowfullscreen></iframe>
+                        </div>
+
+                        <div class="video-info">
+                            <img src="assets/avatar.jpg" alt="Channel" class="channel-avatar">
+
+                            <div class="video-text-details">
+                                <div class="title-row">
+                                    <h3 class="video-title">Learn HTML Lorem ipsum dolor sit amet consectetur
+                                        adipisicing elit. Aut, rerum.</h3>
+                                    <img src="assets/3dots.png" alt="three dots" class="three-dots">
+                                </div>
+                                <p class="channel-name">Code with me</p>
+                                <p class="video-views">1M views • 1 day ago</p>
+                                <p class="video-tags">#tags</p>
+                                <span class="video-badge">4K</span>
+                            </div>
+                        </div>
+                    </article>
+                    <article class="video-card">
+                        <div class="thumbnail-container">
+                            <iframe src="https://www.youtube.com/embed/ycEKAjMdd1Q?si=7bV6O7lofIe0gajx"
+                                title="YouTube video player" frameborder="0"
+                                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                                allowfullscreen></iframe>
+                        </div>
+
+                        <div class="video-info">
+                            <img src="assets/avatar.jpg" alt="Channel" class="channel-avatar">
+
+                            <div class="video-text-details">
+                                <div class="title-row">
+                                    <h3 class="video-title">Learn HTML Lorem ipsum dolor sit amet consectetur
+                                        adipisicing elit. Aut, rerum.</h3>
+                                    <img src="assets/3dots.png" alt="three dots" class="three-dots">
+                                </div>
+                                <p class="channel-name">Code with me</p>
+                                <p class="video-views">1M views • 1 day ago</p>
+                                <p class="video-tags">#tags</p>
+                                <span class="video-badge">4K</span>
+                            </div>
+                        </div>
+                    </article>
+                    <article class="video-card">
+                        <div class="thumbnail-container">
+                            <iframe src="https://www.youtube.com/embed/ycEKAjMdd1Q?si=7bV6O7lofIe0gajx"
+                                title="YouTube video player" frameborder="0"
+                                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                                allowfullscreen></iframe>
+                        </div>
+
+                        <div class="video-info">
+                            <img src="assets/avatar.jpg" alt="Channel" class="channel-avatar">
+
+                            <div class="video-text-details">
+                                <div class="title-row">
+                                    <h3 class="video-title">Learn HTML Lorem ipsum dolor sit amet consectetur
+                                        adipisicing elit. Aut, rerum.</h3>
+                                    <img src="assets/3dots.png" alt="three dots" class="three-dots">
+                                </div>
+                                <p class="channel-name">Code with me</p>
+                                <p class="video-views">1M views • 1 day ago</p>
+                                <p class="video-tags">#tags</p>
+                                <span class="video-badge">4K</span>
+                            </div>
+                        </div>
+                    </article>
+                    <article class="video-card">
+                        <div class="thumbnail-container">
+                            <iframe src="https://www.youtube.com/embed/ycEKAjMdd1Q?si=7bV6O7lofIe0gajx"
+                                title="YouTube video player" frameborder="0"
+                                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                                allowfullscreen></iframe>
+                        </div>
+
+                        <div class="video-info">
+                            <img src="assets/avatar.jpg" alt="Channel" class="channel-avatar">
+
+                            <div class="video-text-details">
+                                <div class="title-row">
+                                    <h3 class="video-title">Learn HTML Lorem ipsum dolor sit amet consectetur
+                                        adipisicing elit. Aut, rerum.</h3>
+                                    <img src="assets/3dots.png" alt="three dots" class="three-dots">
+                                </div>
+                                <p class="channel-name">Code with me</p>
+                                <p class="video-views">1M views • 1 day ago</p>
+                                <p class="video-tags">#tags</p>
+                                <span class="video-badge">4K</span>
+                            </div>
+                        </div>
+                    </article>
+                    <article class="video-card">
+                        <div class="thumbnail-container">
+                            <iframe src="https://www.youtube.com/embed/ycEKAjMdd1Q?si=7bV6O7lofIe0gajx"
+                                title="YouTube video player" frameborder="0"
+                                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                                allowfullscreen></iframe>
+                        </div>
+
+                        <div class="video-info">
+                            <img src="assets/avatar.jpg" alt="Channel" class="channel-avatar">
+
+                            <div class="video-text-details">
+                                <div class="title-row">
+                                    <h3 class="video-title">Learn HTML Lorem ipsum dolor sit amet consectetur
+                                        adipisicing elit. Aut, rerum.</h3>
+                                    <img src="assets/3dots.png" alt="three dots" class="three-dots">
+                                </div>
+                                <p class="channel-name">Code with me</p>
+                                <p class="video-views">1M views • 1 day ago</p>
+                                <p class="video-tags">#tags</p>
+                                <span class="video-badge">4K</span>
+                            </div>
+                        </div>
+                    </article>
+                    <article class="video-card">
+                        <div class="thumbnail-container">
+                            <iframe src="https://www.youtube.com/embed/ycEKAjMdd1Q?si=7bV6O7lofIe0gajx"
+                                title="YouTube video player" frameborder="0"
+                                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                                allowfullscreen></iframe>
+                        </div>
+
+                        <div class="video-info">
+                            <img src="assets/avatar.jpg" alt="Channel" class="channel-avatar">
+
+                            <div class="video-text-details">
+                                <div class="title-row">
+                                    <h3 class="video-title">Learn HTML Lorem ipsum dolor sit amet consectetur
+                                        adipisicing elit. Aut, rerum.</h3>
+                                    <img src="assets/3dots.png" alt="three dots" class="three-dots">
+                                </div>
+                                <p class="channel-name">Code with me</p>
+                                <p class="video-views">1M views • 1 day ago</p>
+                                <p class="video-tags">#tags</p>
+                                <span class="video-badge">4K</span>
+                            </div>
+                        </div>
+                    </article>
+                    <article class="video-card">
+                        <div class="thumbnail-container">
+                            <iframe src="https://www.youtube.com/embed/ycEKAjMdd1Q?si=7bV6O7lofIe0gajx"
+                                title="YouTube video player" frameborder="0"
+                                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                                allowfullscreen></iframe>
+                        </div>
+
+                        <div class="video-info">
+                            <img src="assets/avatar.jpg" alt="Channel" class="channel-avatar">
+
+                            <div class="video-text-details">
+                                <div class="title-row">
+                                    <h3 class="video-title">Learn HTML Lorem ipsum dolor sit amet consectetur
+                                        adipisicing elit. Aut, rerum.</h3>
+                                    <img src="assets/3dots.png" alt="three dots" class="three-dots">
+                                </div>
+                                <p class="channel-name">Code with me</p>
+                                <p class="video-views">1M views • 1 day ago</p>
+                                <p class="video-tags">#tags</p>
+                                <span class="video-badge">4K</span>
+                            </div>
+                        </div>
+                    </article>
+                    <article class="video-card">
+                        <div class="thumbnail-container">
+                            <iframe src="https://www.youtube.com/embed/ycEKAjMdd1Q?si=7bV6O7lofIe0gajx"
+                                title="YouTube video player" frameborder="0"
+                                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                                allowfullscreen></iframe>
+                        </div>
+
+                        <div class="video-info">
+                            <img src="assets/avatar.jpg" alt="Channel" class="channel-avatar">
+
+                            <div class="video-text-details">
+                                <div class="title-row">
+                                    <h3 class="video-title">Learn HTML Lorem ipsum dolor sit amet consectetur
+                                        adipisicing elit. Aut, rerum.</h3>
+                                    <img src="assets/3dots.png" alt="three dots" class="three-dots">
+                                </div>
+                                <p class="channel-name">Code with me</p>
+                                <p class="video-views">1M views • 1 day ago</p>
+                                <p class="video-tags">#tags</p>
+                                <span class="video-badge">4K</span>
+                            </div>
+                        </div>
+                    </article>
+                    <article class="video-card">
+                        <div class="thumbnail-container">
+                            <iframe src="https://www.youtube.com/embed/ycEKAjMdd1Q?si=7bV6O7lofIe0gajx"
+                                title="YouTube video player" frameborder="0"
+                                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                                allowfullscreen></iframe>
+                        </div>
+
+                        <div class="video-info">
+                            <img src="assets/avatar.jpg" alt="Channel" class="channel-avatar">
+
+                            <div class="video-text-details">
+                                <div class="title-row">
+                                    <h3 class="video-title">Learn HTML Lorem ipsum dolor sit amet consectetur
+                                        adipisicing elit. Aut, rerum.</h3>
+                                    <img src="assets/3dots.png" alt="three dots" class="three-dots">
+
+                                </div>
+                                <p class="channel-name">Code with me</p>
+                                <p class="video-views">1M views • 1 day ago</p>
+                                <p class="video-tags">#tags</p>
+                                <span class="video-badge">4K</span>
+                            </div>
+                        </div>
+                    </article>
+
+
                 </section>
 
             </div>
-    </div>
     </div>
 </body>
 
